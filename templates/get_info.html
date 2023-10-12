@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Popbill API Test.</title>
+</head>
+<body>
+<div id="content">
+    <p class="heading1">세금계산서 정보확인</p>
+    <br/>
+    <fieldset class="fieldset1">
+        <ul>
+            <li>팝빌에서 세금계산서 관리 목적으로 할당한 식별번호 (Response.itemKey) : {{ itemKey }}</li>
+            <li>과세형태 (Response.taxType) : {{ taxType }}</li>
+            <li>작성일자 (Response.writeDate) : {{ writeDate }}</li>
+            <li>임시저장 일시 (Response.regDT) : {{ regDT }}</li>
+            <li>발행형태 (Response.issueType) : {{ issueType }}</li>
+            <li>공급가액 합계 (Response.supplyCostTotal) : {{ supplyCostTotal }}</li>
+            <li>세액 합계 (Response.taxTotal) : {{ taxTotal }}</li>
+            <li>영수/청구 (Response.purposeType) : {{ purposeType }}</li>
+            <li>발행일시 (Response.issueDT) : {{ issueDT }}</li>
+            <li>지연발행 여부 (Response.lateIssueYN) : {{ lateIssueYN }}</li>
+            <li>발행예정일시 (Response.preIssueDT) : {{ preIssueDT }}</li>
+            <li>개봉 여부 (Response.openYN) : {{ openYN }}</li>
+            <li>개봉일시 (Response.openDT) : {{ openDT }}</li>
+            <li>상태메모 (Response.stateMemo) : {{ stateMemo }}</li>
+            <li>상태코드 (Response.stateCode) : {{ stateCode }}</li>
+            <li>상태 변경일시 (Response.stateDT) : {{ stateDT }}</li>
+            <li>국세청승인번호 (Response.ntsconfirmNum) : {{ ntsconfirmNum }}</li>
+            <li>국세청 전송결과 (Response.ntsresult) : {{ ntsresult }}</li>
+            <li>국세청 전송일시 (Response.ntssendDT) : {{ ntssendDT }}</li>
+            <li>국세청 결과 수신일시 (Response.ntsresultDT) : {{ ntsresultDT }}</li>
+            <li>결과코드 (Response.ntssendErrCode) : {{ ntssendErrCode }}</li>
+            <li>수정세금계산서 발행시 입력한 사유코드 (Response.modifyCode) : {{ modifyCode }}</li>
+            <li>연동문서 여부 (Response.interOPYN) : {{ interOPYN }}</li>
+            <li>공급자 상호 (Response.invoicerCorpName) : {{ invoicerCorpName }}</li>
+            <li>공급자 사업자번호 (Response.invoicerCorpNum) : {{ invoicerCorpNum }}</li>
+            <li>파트너가 팝빌에 세금계산서를 임시저장 또는 발행시 할당한 문서번호 (Response.invoicerMgtKey) : {{ invoicerMgtKey }}</li>
+            <li>공급자 인쇄여부 (Response.invoicerPrintYN) : {{ invoicerPrintYN }}</li>
+            <li>공급받는자 상호 (Response.invoiceeCorpName) : {{ invoiceeCorpName }}</li>
+            <li>공급받는자 사업자번호 (Response.invoiceeCorpNum) : {{ invoiceeCorpNum }}</li>
+            <li>파트너가 할당한 문서번호 (Response.invoiceeMgtKey) : {{ invoiceeMgtKey }}</li>
+            <li>공급자 인쇄여부 (Response.invoiceePrintYN) : {{ invoiceePrintYN }}</li>
+            <li>공급받는자 휴폐업상태 (Response.closeDownState) : {{ closeDownState }}</li>
+            <li>형식 (Response.closeDownStateDate) : {{ closeDownStateDate }}</li>
+            <li>수탁자 상호 (Response.trusteeCorpName) : {{ trusteeCorpName }}</li>
+            <li>수탁자 사업자번호 (Response.trusteeCorpNum) : {{ trusteeCorpNum }}</li>
+            <li>파트너가 할당한 문서번호 (Response.trusteeMgtKey) : {{ trusteeMgtKey }}</li>
+            <li>수탁자 인쇄여부 (Response.trusteePrintYN) : {{ trusteePrintYN }}</li>
+        </ul>
+    </fieldset>
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Popbill API Test.</title>
+</head>
+<body>
+<div id="content">
+    <h1>전송 결과</h1>
+    <br/>
+    <fieldset class="fieldset1">
+        <ul>
+            <li>응답코드 (Response.code) : {{ code }}</li>
+            <li>응답메시지 (Response.message) : {{ message }}</li>
+            <li>국세청 승인번호 (Response.ntsConfirmNum) : {{ ntsConfirmNum }}</li>
+        </ul>
+    </fieldset>
+</div>
+<div>
+    <br><br>
+    <h1>세금계산서 정보확인</h1>
+    <br>
+    <h2>상태 확인</h2>
+    <form id="getInfoForm" action="{{SERVER_URL}}getInfo" method="POST">
+        <input name="MgtKey" required="required" type="hidden" value="{{invoicerMgtKey}}">
+        <input type="submit" value="확인">
+    </form>
+</div>
+<div>
+    <br><br>
+    <h1>세금계산서 보기/인쇄</h1>
+    <br>
+    <h2>세금계산서 상세 정보 팝업 URL</h2>
+    <form id="getPopUpURLForm" action="{{SERVER_URL}}getPopUpURL" method="POST">
+        <input name="MgtKey" required="required" type="hidden" value="{{invoicerMgtKey}}">
+        <input type="submit" value="확인">
+    </form>
+    <br>
+    <h2>세금계산서 상세 정보 팝업 URL [메뉴/버튼 제외]</h2>
+    <form id="getViewURLForm" action="{{SERVER_URL}}getViewURL" method="POST">
+        <input name="MgtKey" required="required" type="hidden" value="{{invoicerMgtKey}}">
+        <input type="submit" value="확인">
+    </form>
+    <br>
+    <h2>세금계산서 인쇄 팝업 URL [공급자/공급받는자 용]</h2>
+    <form id="getPrintURLForm" action="{{SERVER_URL}}getPrintURL" method="POST">
+        <input name="MgtKey" required="required" type="hidden" value="{{invoicerMgtKey}}">
+        <input type="submit" value="확인">
+    </form>
+    <br>
+    <h2>세금계산서 (구)인쇄 팝업 URL [공급자/공급받는자 용]</h2>
+    <form id="getOldPrintURLForm" action="{{SERVER_URL}}getOldPrintURL" method="POST">
+        <input name="MgtKey" required="required" type="hidden" value="{{invoicerMgtKey}}">
+        <input type="submit" value="확인">
+    </form>
+    <br>
+    <h2>세금계산서 인쇄 팝업 URL [공급받는자용]</h2>
+    <form id="getEPrintURLForm" action="{{SERVER_URL}}getEPrintURL" method="POST">
+        <input name="MgtKey" required="required" type="hidden" value="{{invoicerMgtKey}}">
+        <input type="submit" value="확인">
+    </form>
+    <br>
+    <h2>세금계산서 안내메일 버튼 팝업 URL</h2>
+    <form id="getMailURLForm" action="{{SERVER_URL}}getMailURL" method="POST">
+        <input name="MgtKey" required="required" type="hidden" value="{{invoicerMgtKey}}">
+        <input type="submit" value="확인">
+    </form>
+    <br>
+    <h2>세금계산서 PDF 다운로드 URL</h2>
+    <form id="getPDFURLForm" action="{{SERVER_URL}}getPDFURL" method="POST">
+        <input name="MgtKey" required="required" type="hidden" value="{{invoicerMgtKey}}">
+        <input type="submit" value="확인">
+    </form>
+</div>
+</body>
+</html>
